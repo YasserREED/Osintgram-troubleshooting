@@ -1,8 +1,8 @@
 #!/bin/bash
 
-
-if (( $EUID != 0 )); then	
-    echo "Your not root!! Usage: sudo ./install.sh"
+# Check If you are not root
+if (( $EUID != 0 )); then       
+    echo "Usage: sudo ./install.sh"
 
 else
 # Install deb lib
@@ -32,14 +32,15 @@ pip3 install instagram_private_api
 pip3 install pyreadline
 pip3 install gnureadline
 
-# Enter the Osintgram file
+
+# Go to Osintgram file
 cd Osintgram/
 
 # Donwload the requirments
 pip3 install -r requirements.txt
 
 # Enter Config File
-cd config
+cd config/
 
 # Delete settings.json
 rm settings.json
