@@ -6,8 +6,11 @@ if (( $EUID != 0 )); then
 
 else
 # Install deb lib
-sudo echo "deb http://http.kali.org/kali kali-rolling main contrib non-free 
-deb http://http.kali.org/kali kali-last-snapshot main contrib non-free" >/etc/apt/sources.list
+sudo echo "# See https://www.kali.org/docs/general-use/kali-linux-sources-list-repositories/
+deb http://http.kali.org/kali kali-rolling main contrib non-free
+
+# Additional line for source packages
+# deb-src http://http.kali.org/kali kali-rolling main contrib non-free" >/etc/apt/sources.list
 
 # Update the lib
 apt update
@@ -17,12 +20,6 @@ apt update
 # Install Python requiremnts
 apt install python3 -y
 apt install python3-pip -y
-
-# Install git
-apt install git -y
-
-# Install gedit
-apt install gedit -y
 
 # Install the lib
 git clone https://github.com/Datalux/Osintgram.git
