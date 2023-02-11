@@ -23,7 +23,7 @@ Here you can see as mention below step by step to download the script in your li
 
 #### Download git
 ```console
-YasserREED@Linux:~$ sudo apt git
+YasserREED@Linux:~$ sudo apt install git
 ```
 #### Copy this Link
 ```console
