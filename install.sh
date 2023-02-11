@@ -12,6 +12,7 @@ deb http://http.kali.org/kali kali-last-snapshot main contrib non-free" >/etc/ap
 # Update the lib
 apt update
 apt upgrade -y
+apt update
 
 # Install Python requiremnts
 apt install python3 -y
